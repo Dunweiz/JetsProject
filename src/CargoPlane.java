@@ -1,13 +1,14 @@
 
-public class CargoPlane extends Jet
-{
+public class CargoPlane extends Jet implements CargoCarrier {
 
-	public CargoPlane(String model, double speed, int range, long price) {
-		super(model, speed, range, price);
+	public CargoPlane(String type, String model, double speed, int range, long price) {
+		super(type, model, speed, range, price);
 	}
 
-	public void loadCargo( ) {
-		System.out.println();
+	@Override
+	public void loadCargo() {
+		System.out.println("Loading Cargo for " + this.getModel());
 		
 	}
+	
 }

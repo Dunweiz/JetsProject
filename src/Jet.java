@@ -1,6 +1,6 @@
 
 public class Jet {
-	
+
 	private String type;
 	private String model;
 	private double speed;
@@ -14,6 +14,11 @@ public class Jet {
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "Jet [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
 	}
 
 	public String getType() {
@@ -92,17 +97,22 @@ public class Jet {
 		this.price = price;
 	}
 
-	public double fly(double speed, int range) {
+	public double flightTime(double speed, int range) {
 		double time = range / speed;
-		
+
 		return time;
 	}
 
-	public double getSpeedInMach(double speed) {
-		double mach = 717 / speed;
-		mach = Math.round(mach * 100)/100;
-		return mach;
+	public void getSpeedInMach() {
+		double mach = this.speed / 717;
+
+		System.out.printf("%.2f mach \n" , mach);
 		
+
+	}
+
+	public void fly() {
+		System.out.println(this.getModel() + " \n is ready for take off.");
 	}
 
 }

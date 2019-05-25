@@ -1,11 +1,13 @@
 
-public class FighterJet extends Jet {
+public class FighterJet extends Jet implements Fight {
 
-	public FighterJet(String model, double speed, int range, long price) {
-		super(model, speed, range, price);
+	public FighterJet(String type, String model, double speed, int range, long price) {
+		super(type, model, speed, range, price);
 	}
 
-	public static void fight() {
-		System.out.println("*Pew* *PEW* *Boom* *pew*");
+	@Override
+	public void Dogfight() {
+		System.out.println(this.getModel() + " \n are all prepared for battle.");
 	}
+
 }
