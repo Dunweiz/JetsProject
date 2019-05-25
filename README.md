@@ -12,4 +12,6 @@ The technologies I have used is, Loops, Switches, Inheritance, Arraylist, and Fi
 
 
 #### Lessons Learned
-I have learned that 
+I have learned that paired programing is much better than working alone.
+I have learned more about inheritance and encapsulation.
+I have learned input and output using Buffered reader.
